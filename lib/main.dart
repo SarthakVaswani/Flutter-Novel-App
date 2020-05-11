@@ -14,18 +14,23 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         primaryColor: Colors.black,
+        scaffoldBackgroundColor: Color(0XFFF8F8FF),
         textTheme: TextTheme(
             headline6: TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.bold,
                 foreground: Paint()..shader = linearGradient),
-                subtitle1: TextStyle(
+              subtitle1: TextStyle(
                 fontSize: 50,
                 fontWeight: FontWeight.bold,
                 foreground: Paint()..shader = linearGradient),
+                caption:TextStyle(
+                fontSize: 10,
+                fontWeight: FontWeight.bold,
+                color: Colors.white),
             subtitle2: TextStyle(
-              fontSize: 22,
-              fontWeight: FontWeight.w400,
+              fontSize: 23,
+              fontWeight: FontWeight.bold,
               color: Colors.black,
             )),
       ),

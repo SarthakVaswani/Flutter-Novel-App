@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ok/widgets.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'main_page.dart';
+import 'widgets.dart';
 
 class Details_Screen extends StatelessWidget {
   static const routeName = '/details-page';
@@ -41,59 +41,62 @@ class Details_Screen extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 17,
             ),
             Text(
               routeArgs['title'],
               style: TextStyle(
-                  fontSize: 28,
+                  fontSize: 20,
                   fontWeight: FontWeight.bold,
                   letterSpacing: 2.5),
+              textAlign: TextAlign.center,
             ),
             SizedBox(
-              height: 20,
+              height: 16,
             ),
             FavButton(),
             SizedBox(
-              height: 30,
+              height: 16,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
                 Card(
+                  color: Colors.black,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
                   elevation: 14,
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 5),
+                    padding: const EdgeInsets.all(5),
                     child: Row(
                       children: <Widget>[
                         Icon(
                           Icons.account_box,
-                          size: 42,
+                          color: Colors.white,
+                          size: 39,
                         ),
-                        Text(
-                          routeArgs['author'],
-                        )
+                        Text(routeArgs['author'],
+                            style: Theme.of(context).textTheme.caption)
                       ],
                     ),
                   ),
                 ),
                 Card(
+                  color: Colors.black,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
                   elevation: 14,
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 5),
+                    padding: const EdgeInsets.all(5),
                     child: Row(
                       children: <Widget>[
                         Icon(
                           Icons.calendar_today,
-                          size: 42,
+                          size: 39,
+                          color: Colors.white,
                         ),
-                        Text(
-                          routeArgs['year'],
-                        )
+                        Text(routeArgs['year'],
+                            style: Theme.of(context).textTheme.caption)
                       ],
                     ),
                   ),
@@ -101,7 +104,7 @@ class Details_Screen extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: 40,
+              height: 30,
             ),
             Container(
               child: Text(
@@ -111,10 +114,14 @@ class Details_Screen extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
             ),
+            SizedBox(
+              height: 10,
+            )
           ],
         ),
       ),
-      bottomNavigationBar: GestureDetector(
+      bottomNavigationBar: InkWell(
+        splashColor: Colors.black,
         onTap: _launchURL,
         child: Container(
           width: 20,
@@ -130,14 +137,14 @@ class Details_Screen extends StatelessWidget {
       ),
     );
   }
-}
 
-_launchURL() async {
-  const url =
-      'https://drive.google.com/file/d/1uohm0nAysIZO308AUFjjPlnUEMFqRhGv/view?usp=sharing';
-  if (await canLaunch(url)) {
-    await launch(url);
-  } else {
-    throw 'Could not launch $url';
+  _launchURL() async {
+    const url =
+        'https://drive.google.com/file/d/1uohm0nAysIZO308AUFjjPlnUEMFqRhGv/view?usp=sharing';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 }

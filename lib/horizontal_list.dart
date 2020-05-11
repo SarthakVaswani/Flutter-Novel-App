@@ -20,13 +20,13 @@ class Horizontal_list extends StatelessWidget {
             'description': bookList[index].description,
             'author': bookList[index].author,
             'year': bookList[index].year,
-            'pdf': bookList[index].pdfUrl
+            'pdf':bookList[index].pdfUrl
           });
         },
         child: Column(
           children: <Widget>[
             Card(
-              elevation: 10,
+              elevation: 15,
               child: Hero(
                 tag: bookList[index].id,
                 child: Container(
@@ -45,7 +45,7 @@ class Horizontal_list extends StatelessWidget {
             ),
             Text(
               bookList[index].title,
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             )
           ],
@@ -78,7 +78,7 @@ class Horizontal_list1 extends StatelessWidget {
         child: Column(
           children: <Widget>[
             Card(
-              elevation: 10,
+              elevation: 15,
               child: Hero(
                 tag: bestsellers[index].id,
                 child: Container(
@@ -96,8 +96,8 @@ class Horizontal_list1 extends StatelessWidget {
               height: 10,
             ),
             Text(
-              bookList[index].title,
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              bestsellers[index].title,
+              style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             )
           ],
@@ -130,7 +130,7 @@ class Horizontal_list2 extends StatelessWidget {
         child: Column(
           children: <Widget>[
             Card(
-              elevation: 10,
+              elevation: 15,
               child: Hero(
                 tag: foryou[index].id,
                 child: Container(
@@ -148,8 +148,8 @@ class Horizontal_list2 extends StatelessWidget {
               height: 10,
             ),
             Text(
-              bookList[index].title,
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              foryou[index].title,
+              style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             )
           ],
