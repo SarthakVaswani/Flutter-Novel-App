@@ -1,20 +1,31 @@
 'use strict';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "7cd939ce70f009b1b607b3c67a416b08",
-"assets/assets/fonts/Exo2-VariableFont_wght.ttf": "afd53ab0d9cb6142bfb815b8c9226401",
-"assets/assets/images/sv.jpg": "981207b23efd6590564c9bffb1bf1f2a",
-"assets/FontManifest.json": "8eb532a5b4bc8fe1743405cf619ae5b4",
+  "assets/AssetManifest.json": "eee041786f6b5639d9c64aa327371659",
+"assets/assets/images/alchemist.jpg": "56cb45956563a0603bd93d5461f8d893",
+"assets/assets/images/fault.jpg": "45f531f5c31ec7ebbf5be378ee7394be",
+"assets/assets/images/finding_alaska.jpg": "37fa80871696e79a2fbc88c01cdb2bd0",
+"assets/assets/images/goosebumps.jpg": "ce2de5bb1c6b693128c8fba594a9f23a",
+"assets/assets/images/hp1.jpg": "88c8fe011aa2683f66e43efe9922dafc",
+"assets/assets/images/hp2.jpg": "b640b94346460773df2e0ac907b3c17b",
+"assets/assets/images/hp3.jpg": "d9f065e0e254ddfbdcff2227b2cb0171",
+"assets/assets/images/hp4.jpg": "104fe7b788eb1b3be3bace3415bc53cb",
+"assets/assets/images/hp5.jpg": "2f2aa6d570ca57e9ee152b618816e467",
+"assets/assets/images/hp6.jpg": "956c8302b0e02a3c3ebbdf142bf95fae",
+"assets/assets/images/hp7.jpg": "89fb2b0921d3b3d03c17bd8bfe358fa2",
+"assets/assets/images/Sherlock_Holmes.jpg": "32f4edd5ecac7a0aa1baac6c171f725a",
+"assets/assets/images/subtle.jpg": "e834367f301f540cac4c6f3afa05dc8d",
+"assets/FontManifest.json": "01700ba55b08a6141f33e168c4a6c22f",
 "assets/fonts/MaterialIcons-Regular.ttf": "56d3ffdef7a25659eab6a68a3fbfaf16",
-"assets/LICENSE": "3556d4a4b5b9109f04be535912520c0c",
+"assets/LICENSE": "0563dbe252ce7093be72c5712b1daddc",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "115e937bb829a890521f72d2e664b632",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"index.html": "f58d687988a6a9dd2361e48470d7b643",
-"/": "f58d687988a6a9dd2361e48470d7b643",
-"main.dart.js": "7f3987633030a9e2652ae0ffcc514862",
-"manifest.json": "ab9127c4fc0c98e79f76c01d1deceb09"
+"index.html": "da5d5ff889d0b6d84938cc2fa670f188",
+"/": "da5d5ff889d0b6d84938cc2fa670f188",
+"main.dart.js": "d1d902aef4126ea0c3157863d5dc08c6",
+"manifest.json": "3d67a32fb571f21c0f0f444ded8650e6"
 };
 
 self.addEventListener('activate', function (event) {
